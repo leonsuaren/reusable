@@ -1,7 +1,9 @@
 import React from 'react';
 
+import * as styled from './index';
+
 export const Skeleton = () => {
   return (
-    <div>Skeleton</div>
+    <styled.SkeletonStyled>Skeleton</styled.SkeletonStyled>
   );
 }
