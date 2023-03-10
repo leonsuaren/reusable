@@ -1,2 +1,2 @@
 export { Skeleton } from './Skeleton';
-export { SkeletonStyled } from './styled';
+export { SkeletonStyled, SkeletonContainer } from './styled';

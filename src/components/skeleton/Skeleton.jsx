@@ -4,6 +4,10 @@ import * as styled from './index';
 
 export const Skeleton = () => {
   return (
-    <styled.SkeletonStyled>Skeleton</styled.SkeletonStyled>
+    <styled.SkeletonContainer>
+      <styled.SkeletonStyled size='medium' />
+      <styled.SkeletonStyled size='small' />
+      <styled.SkeletonStyled size='large' />
+    </styled.SkeletonContainer>
   );
 }
