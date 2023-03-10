@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const SkeletonContainer = styled.div`
   @media (min-width: 320px) and (max-width:480px ) {
@@ -112,12 +112,7 @@ const skeletonSize = ({ size }) => {
   }
 }
 
-export const SkeletonStyled = styled.div`
-  ${skeletonSize};
-  background-color: ${ props => props.theme.primaryThemeColor };
-  animation: skeleton-loading 1s ease-in infinite alternate-reverse;
-
-  @keyframes skeleton-loading {
+const skeletonLoading = keyframes`
     0% {
       opacity: 0;
     }
@@ -127,5 +122,10 @@ export const SkeletonStyled = styled.div`
     100% {
       opacity: 1;
     }
-  }
+`;
+
+export const SkeletonStyled = styled.div`
+  ${skeletonSize};
+  background-color: ${ props => props.theme.primaryThemeColor};
+  animation: ${skeletonLoading} 1s ease-in infinite alternate-reverse;
 `;
