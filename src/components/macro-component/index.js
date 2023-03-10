@@ -1,0 +1,1 @@
+export { MacroComponent } from './MacroComponent';

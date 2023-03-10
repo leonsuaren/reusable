@@ -12,7 +12,7 @@ function App() {
         <utils.GlobalStyles />
         <Router>
           <Routes>
-            <Route path='/' element={<com.Skeleton />} />
+            <Route path='/' element={<com.MacroComponent />} />
           </Routes>
         </Router>
       </layout.Layout>
