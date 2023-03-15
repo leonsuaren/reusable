@@ -1,7 +1,11 @@
 import React from 'react';
 
+import * as styled from './index';
+
 export const MacroComponent = () => {
   return (
-    <div>Macro Component</div>
+    <styled.MacroComponentContainer>
+      <styled.MacroComponentStyled shape="avatar" position="three"/>
+    </styled.MacroComponentContainer>
   )
 }
