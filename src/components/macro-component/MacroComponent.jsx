@@ -7,7 +7,7 @@ import * as styled from './index';
 export const MacroComponent = ({ shape, position }) => {
   const [macroComponent, setMacroComponent] = useState([]);
   const params = useLocation();
-  // console.log(macroComponent)
+  
   useEffect(() => {
     const user = [{ shape: 'avatar', position: 'one' }, { shape: 'details', position: 'two' }, { shape: 'description', position: 'three' }];
     const product = [{ shape: 'product', position: 'one' }, { shape: 'details', position: 'two' }, { shape: 'description', position: 'three' }];
