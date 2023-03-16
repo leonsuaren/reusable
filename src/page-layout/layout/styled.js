@@ -12,13 +12,16 @@ export const LayoutStyled = styled.div`
     height: 100%;
     max-height: 100vh;
     min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
     display: grid;
     grid-template-areas: 
     "avatar description"
-    "details details";
+    "details description";
     gap: 12px;
     align-items: flex-start;
     width: 100%;
@@ -31,7 +34,7 @@ export const LayoutStyled = styled.div`
     grid-template-columns: 30% 70%;
     grid-template-areas: 
     "avatar description"
-    "details details";
+    "details description";
     gap: 12px;
     -webkit-box-align: end;
     align-items: end;

@@ -12,9 +12,14 @@ function App() {
         <utils.GlobalStyles />
         <Router>
           <Routes>
-            <Route path='/' element={<com.Skeleton/>} />
-            <Route path='/error' element={<com.MacroComponent shape="error" position='two'/>} />
-            <Route path='*' element={<Navigate to='/error'  replace={true}/>} />
+            <Route path='/p/:id' element={<com.MacroComponent />} />
+            <Route path='/u/:id' element={<com.MacroComponent />} />
+            <Route path='/h/:id' element={<com.MacroComponent />} />
+            <Route path='/p' element={<com.MacroComponent />} />
+            <Route path='/u' element={<com.MacroComponent />} />
+            <Route path='/h' element={<com.MacroComponent />} />
+            <Route path='/error' element={<com.MacroComponent />} />
+            <Route path='/*' element={<Navigate to='/error'  replace={true}/>} />
           </Routes>
         </Router>
       </layout.Container>

@@ -5,21 +5,37 @@ const shape = ({ shape }) => {
     return css`
       border-radius: 50%;
       height: 200px;
+      width: 200px;
+    `;
+  } else if (shape === 'product') {
+    return css`
+    border-radius: 5px;
+    height: 200px;
+    width: 200px;
+  `;
+  } else if (shape === 'stars') {
+    return css`
+    border-radius: 5px;
+    height: 50px;
+    width: 300px;
+  `;
+  } else if (shape === 'description') {
+    return css`
+      border-radius: 5px;
+      height: 300px;
+      width: 300px;
     `;
   } else if (shape === 'details') {
     return css`
       border-radius: 5px;
-      height: 100%;
-    `;
-  } else if (shape === 'stars') {
-    return css`
-      border-radius: 5px;
-      height: 50px;
+      height: 200px;
+      width: 300px;
     `;
   } else if (shape === 'error') {
     return css`
       border-radius: 5px;
       height: 100px;
+      width: 300px;
     `;
   }
 }
@@ -40,25 +56,10 @@ const position = ({ position }) => {
   }
 }
 
-
-// export const MacroComponentContainer = styled.div`
-//     @media (min-width: 320px) and (max-width:480px ) {
-//     display: grid;
-//     grid-template-areas: 
-//     "sectionOne"
-//     "sectionTwo"
-//     "sectionThree";
-//     gap: 12px;
-//     align-items: center;
-//     justify-content: center;
-//     width: 100%;
-//     height: 100%;
-//     min-height: 100%;
-//   }
-// `;
-
 export const MacroComponentStyled = styled.div`
   background-color: ${ props => props.theme.primaryThemeColor};
+  align-items: center;
+  justify-content: center;
   ${position};
   ${shape};
 `;
