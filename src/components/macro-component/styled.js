@@ -28,8 +28,22 @@ const shape = ({ shape }) => {
   } else if (shape === 'details') {
     return css`
       border-radius: 5px;
-      height: 200px;
       width: 300px;
+      @media (min-width: 320px) and (max-width:480px ) {
+        height: 150px;
+      }
+      
+      @media (min-width: 481px) and (max-width: 768px) {
+        height: 80px;
+      }
+      
+      @media (min-width: 769px) and (max-width: 1024px) {
+        height: 100px;
+      }
+      
+      @media (min-width: 1025px) {
+        height: 100px;
+      }
     `;
   } else if (shape === 'error') {
     return css`

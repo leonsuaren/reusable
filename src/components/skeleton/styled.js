@@ -14,7 +14,7 @@ const skeletonSize = ({ size }) => {
         height: 100px
       }
       @media (min-width: 769px) and (max-width: 1024px) {
-        grid-area: description;
+        grid-area: details;
         height: 100px
       }
       @media (min-width: 1025px) {
@@ -54,7 +54,7 @@ const skeletonSize = ({ size }) => {
         height: 300px;
       }
       @media (min-width: 769px) and (max-width: 1024px) {
-        grid-area: details;
+        grid-area: description;
         height: 500px
       }
       @media (min-width: 1025px) {

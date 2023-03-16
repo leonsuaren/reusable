@@ -4,9 +4,10 @@ import { useLocation } from 'react-router-dom';
 import * as lay from '../../page-layout';
 import * as styled from './index';
 
-export const MacroComponent = () => {
+export const MacroComponent = ({ id }) => {
   const [macroComponent, setMacroComponent] = useState([]);
   const params = useLocation();
+  console.log(id);
 
   useEffect(() => {
     const user = [{ shape: 'avatar', position: 'one' }, { shape: 'details', position: 'two' }, { shape: 'description', position: 'three' }];

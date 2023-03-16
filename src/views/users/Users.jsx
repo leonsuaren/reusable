@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 
 import * as com from '../../components';
 
@@ -12,10 +12,10 @@ export const Users = () => {
   });
 
   return (
-    <div>
+    <Fragment>
       {
         showSkeleton ? <com.Skeleton /> : <com.MacroComponent />
       }
-    </div>
+    </Fragment>
   )
 }
