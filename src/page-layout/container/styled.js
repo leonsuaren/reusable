@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const ContainerStyled = styled.div`
   @media (min-width: 320px) and (max-width:480px ) {
     margin: 30px;
     height: 100vh;

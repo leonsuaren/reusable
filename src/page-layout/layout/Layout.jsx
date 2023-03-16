@@ -4,8 +4,8 @@ import * as styled from './index';
 
 export const Layout = ({ children }) => {
   return (
-    <styled.Container>
+    <styled.LayoutStyled>
       { children }
-    </styled.Container>
+    </styled.LayoutStyled>
   )
 }
