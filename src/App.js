@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import * as utils from './utils';
 import * as layout from './page-layout/container';
 import * as vie from './views';
-import * as com from './components';
 
 function App() {
   return (

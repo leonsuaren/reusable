@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import * as lay from '../../page-layout';
 import * as styled from './index';
 
-export const MacroComponent = ({ shape, position }) => {
+export const MacroComponent = () => {
   const [macroComponent, setMacroComponent] = useState([]);
   const params = useLocation();
 
