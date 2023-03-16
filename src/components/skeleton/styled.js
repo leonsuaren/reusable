@@ -7,7 +7,7 @@ const skeletonSize = ({ size }) => {
       animation-delay: 2s;
       @media (min-width: 320px) and (max-width:480px ) {
         grid-area: details;
-        height: 50px;
+        height: 100px;
       }
       @media (min-width: 481px) and (max-width: 768px) {
         grid-area: details;
@@ -79,6 +79,8 @@ const skeletonLoading = keyframes`
 
 export const SkeletonStyled = styled.div`
   ${skeletonSize};
+  width: 300px;
+  border-radius: 5px;
   background-color: ${ props => props.theme.primaryThemeColor};
   animation: ${skeletonLoading} 1s ease-in infinite alternate-reverse;
 `;
