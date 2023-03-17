@@ -15,7 +15,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='p' element={<vie.Products id={id} />}>
-              <Route path=':id' element={<vie.Products id={id} />} />
+              <Route path='p/:id' element={<vie.Products id={id} />} />
             </Route>
             <Route path='u' element={<vie.Users />}>
               <Route path=':id' element={<vie.Users />} />

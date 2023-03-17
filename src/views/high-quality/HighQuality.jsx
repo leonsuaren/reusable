@@ -4,6 +4,7 @@ import * as com from '../../components';
 
 export const HighQuality = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
+  const elements = [{ shape: 'product', position: 'one' }, { shape: 'stars', position: 'two' }, { shape: 'description', position: 'three' }];
 
   useEffect(() => {
     setTimeout(() => {
@@ -14,7 +15,7 @@ export const HighQuality = () => {
   return (
     <div>
       {
-        showSkeleton ? <com.Skeleton /> : <com.MacroComponent />
+        showSkeleton ? <com.Skeleton /> : <com.MacroComponent elements={elements} />
       }
     </div>
   )

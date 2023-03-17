@@ -4,27 +4,22 @@ import { useLocation } from 'react-router-dom';
 import * as lay from '../../page-layout';
 import * as styled from './index';
 
-export const MacroComponent = ({ id }) => {
+export const MacroComponent = ({ elements }) => {
   const [macroComponent, setMacroComponent] = useState([]);
   const params = useLocation();
-  console.log(id);
+
+  /* 
+    paso uno: determinar cual de los 3 valores dados es menor y cual es el mayor
+      comparando los 3 valores
+    paso dos: comparar los valores dados y determinar cual valor le corresponde a cada posicion
+    paso tres: pasar el valor en el orden determinada a la posicion.
+  */
 
   useEffect(() => {
-    const user = [{ shape: 'avatar', position: 'one' }, { shape: 'details', position: 'two' }, { shape: 'description', position: 'three' }];
-    const product = [{ shape: 'product', position: 'one' }, { shape: 'details', position: 'two' }, { shape: 'description', position: 'three' }];
-    const highQuality = [{ shape: 'product', position: 'one' }, { shape: 'stars', position: 'two' }, { shape: 'description', position: 'three' }];
-    const error = [{ shape: 'error', position: 'two' }];
-    if (params.pathname === '/u' || params.pathname === `/u`) {
-      setMacroComponent(user);
-    } else if (params.pathname === '/error') {
-      setMacroComponent(error);
-    } else if (params.pathname === '/p') {
-      setMacroComponent(product);
-    } else if (params.pathname === '/h') {
-      setMacroComponent(highQuality)
+    if (params.pathname === '/u' || params.pathname === `/p` || params.pathname === '/h' || params.pathname === '/error') {
+      setMacroComponent(elements);
     } 
-
-  }, [params]);
+  }, [elements, params]);
   return (
     <lay.Layout>
       {

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 import * as com from '../../components';
 
-export const Products = ({ id }) => {
+export const Products = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
-  console.log(id)
+  const element = [{ shape: 'product', position: 'one' }, { shape: 'details', position: 'two' }, { shape: 'description', position: 'three' }];
+
   useEffect(() => {
     setTimeout(() => {
       setShowSkeleton(false)
@@ -14,7 +15,7 @@ export const Products = ({ id }) => {
   return (
     <div>
       {
-        showSkeleton ? <com.Skeleton /> : <com.MacroComponent id={id}/>
+        showSkeleton ? <com.Skeleton /> : <com.MacroComponent elements={element}/>
       }
     </div>
   )

@@ -4,6 +4,8 @@ import * as com from '../../components';
 
 export const Users = () => {
   const [showSkeleton, setShowSkeleton] = useState(true);
+  const elements = [{ shape: 'avatar', position: 2000 }, { shape: 'details', position: 50 }, { shape: 'description', position: 35 }];
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -14,7 +16,7 @@ export const Users = () => {
   return (
     <Fragment>
       {
-        showSkeleton ? <com.Skeleton /> : <com.MacroComponent />
+        showSkeleton ? <com.Skeleton /> : <com.MacroComponent elements={elements}/>
       }
     </Fragment>
   )
